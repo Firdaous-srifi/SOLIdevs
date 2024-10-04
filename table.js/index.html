@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        User Data Management
+    </title>
+
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+        #formContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 300px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: green;">
+        GeekforGeeks
+    </h1>
+    <h2>User Data Management</h2>
+
+    <div id="formContainer">
+        <label for="nameInput">
+            Name:
+        </label>
+        <input type="text" id="nameInput" 
+            placeholder="Enter Name...">
+        <label for="emailInput">
+            Email ID:
+        </label>
+        <input type="email" id="emailInput" 
+            placeholder="Enter Email..." for="email">
+        <button onclick="addData()">Add</button>
+    </div>
+
+    <table id="outputTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <script>
+        function addData() {
+            // Get input values
+            let name = document.getElementById("nameInput").value;
+            let email = document.getElementById("emailInput").value;
+
+            // Get the table and insert a new row at the end
+            let table = document.getElementById("outputTable");
+            let newRow = table.insertRow(table.rows.length);
+
+            // Insert data into cells of the new row
+            newRow.insertCell(0).innerHTML = name;
+            newRow.insertCell(1).innerHTML = email;
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>
