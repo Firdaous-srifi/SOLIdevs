@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "create elem",
+			"path": "../SOLIdevs.js/create elem"
+		},
+		{
+			"name": "SOLIdevs",
+			"path": "../../../Documents/GitHub/SOLIdevs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

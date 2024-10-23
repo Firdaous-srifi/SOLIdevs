@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    min-width: 250px;
+}
+
+*{
+    box-sizing: border-box;
+}
+.container {
+    background-color: #e7b7b7;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+.addbtn {
+    text-emphasis-color: white;
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+.addbtn:hover{
+    background-color: #b18d8d;
+}
+ul {
+    margin: 0;
+    padding: 0;
+  }
