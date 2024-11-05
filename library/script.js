@@ -6,7 +6,7 @@ let pubdate = document.getElementById('pdate');
 let price = document.getElementById('price');
 let table = document.getElementById('infoTable');
 let tbody = document.getElementsByTagName('tbody')[0];
-let bookIndex = -1;//**no selection -1 */
+let bookIndex = -1;  //**no selection -1 */
 
 class Book {
     constructor(Title,Author,Publication_date, Price){
@@ -75,7 +75,7 @@ function ShowLibrary(newBook) {
 }
 
 function modifyBook(book) {
-    title.value = book.title;
+    title.value = book.Title;
     author.value = book.Author;
     pubdate.value = book.Publication_date;
     price.value = book.Price;

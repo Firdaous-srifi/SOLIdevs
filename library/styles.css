@@ -1,0 +1,19 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+
+.bookDetails {
+    color: rgb(224, 10, 10);
+    padding:3rem;
+}
+
+.inputs label{
+    color: blue;
+}
+
+.newBook {
+    color: brown;
+    font-size: larger;
+}

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title>
+    <link rel="stylesheet" src="styles.css">
 </head>
 <body>
     <div class="bookDetails">
         <div class="NewBook">Add a book</div>
+        <br>
             <form action="">
                 <div class="inputs">
                     <label for="title">Title :</label>
@@ -20,15 +22,16 @@
                 </div>
 
                 <div class="inputs">
-                    <label for="pdate">Publication Date</label>
-                    <input type="text" name="pdate" id="pdate" required>
+                    <label for="pdate">Publication Date :</label>
+                    <input type="number" name="pdate" id="pdate" required>
                 </div>
 
                 <div class="inputs">
                     <label for="price">Price :</label>
-                    <input type="text" name="price" id="price" required>
+                    <input type="number" name="price" id="price" required>
                 </div>
             </form>
+            <br>
             <button id="AddBook-btn" onclick="addBook()">Add Book</button>
         
     </div>
