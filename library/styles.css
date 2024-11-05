@@ -1,19 +1,71 @@
 * {
-    margin: auto;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-
-.bookDetails {
-    color: rgb(224, 10, 10);
-    padding:3rem;
+body {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    min-height: 100vh;
 }
 
-.inputs label{
-    color: blue;
+.BookDetails {
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid rgb(52, 152, 219);
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
 }
 
-.newBook {
-    color: brown;
-    font-size: larger;
+.NewBook {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(52, 152, 219);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.inputs {
+    margin-bottom: 1.2rem;
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgb(220, 224, 227);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 300ms ease;
+}
+
+.inputs input:focus {
+    outline: none;
+    border-color: rgb(52, 152, 219);
+}
+
+button {
+    background-color: rgb(52, 152, 219);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    transition: background-color 300ms ease;
+}
+
+button:hover {
+    background-color: rgb(31, 115, 172);
 }
