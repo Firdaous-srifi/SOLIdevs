@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+</head>
+<body>
+    <div class="bookDetails">
+        <div class="NewBook">Add a book</div>
+            <form action="">
+                <div class="inputs">
+                    <label for="title">Title :</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+
+                <div class="inputs">
+                    <label for="Author">Author :</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+
+                <div class="inputs">
+                    <label for="pdate">Publication Date</label>
+                    <input type="text" name="pdate" id="pdate" required>
+                </div>
+
+                <div class="inputs">
+                    <label for="price">Price :</label>
+                    <input type="text" name="price" id="price" required>
+                </div>
+            </form>
+            <button id="AddBook-btn" onclick="addBook()">Add Book</button>
+        
+    </div>
+    <div id="search">
+        <input type="number" id="searchYear">
+        <button id="searchBtn" >Search</button>
+    </div>
+
+    <div id="table">
+        <table id="infoTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publication</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

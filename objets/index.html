@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const etudiant1 = new Etudiant("Mayonaise","Mohamed",2000,20)
+        const etudiant2 = new Etudiant("boujm3a","Said",1999,10)
+        const etudiant3 = new Etudiant("Andalous","Amal",1789,14)
+        const etudiant4 = new Etudiant("Bouzebda","Khadouj",2023,19)
+
+
+        class Etudiant {
+            constructor (nom,prenom,annee,note){
+            this.nom = nom;
+            this.prenom = prenom;
+            this.annee = annee;
+            this.note = note;
+            }
+        
+1
+        function calculAge() {
+            const currentYear = new Date().getFullYear();
+            return currentYear - this.annee;
+        }
+
+        function details() {
+            console.log(`Nom: ${this.nom},Prenom: ${this.prenom},Annee: ${this.annee} yearold ,Note: ${note}`);
+        }
+    }
+
+        etudiant1.details();
+        etudiant2.details();
+        etudiant3.details();
+        etudiant4.details();
+
+    </script>
+</body>
+</html>
