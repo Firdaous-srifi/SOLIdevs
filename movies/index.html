@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
+    <style>
+        h1{
+            color: brown;
+            text-decoration:underline;
+        }
+    </style>
 </head>
 <body>
-    <table>
+    <!-- <table>
             <thead>
                 <tr>
                     <th>Title</th>
@@ -20,7 +26,69 @@
                 
             </tbody>
 
-    </table>
-    <script src="script.js"></script>
+    </table> -->
+
+    <h1>Movies To Watch</h1>
+    <div id="movieTable"></div>
+
+
+    <script>
+        class Movie {
+            //parametre of objects
+    constructor(Title,Description,release_date,Rating) {
+        this.Title = Title;
+        this.description = Description;
+        this.Date = release_date;
+        this.Rating = Rating;
+    }
+    Details() {
+        return `
+        <tr>
+            <td>${this.Title}</td>
+            <td>${this.description}</td>
+            <td>${this.Date}</td>
+            <td>${this.Rating}</td>
+            </tr>`;
+    }
+}
+
+    //creating movies
+    const movie1 = new Movie('Joker', 'a man who is mentally ill', 2001, 8);
+    const movie2 = new Movie('Avatar', 'overrated movie', 2018, 8);
+    const movie3 = new Movie('Jurassic Park', 'wild animals', 2001, 8);
+    const movie4 = new Movie('Barbie', 'feminist movie', 2001, 8);
+    const movie5 = new Movie('bortoqala morra', 'delulo girl', 2001, 8);
+    const movie6 = new Movie('Interstellar', 'space fantasy', 2001, 8);
+    const movie7 = new Movie('Inception', 'mindgame', 2001, 8);
+    const movie8 = new Movie('The Shawshank Redemption', 'prison escape story', 2001, 8);
+    const movie9 = new Movie('Godfather', 'italien mafia movie', 2001, 8);
+    const movie10 = new Movie('Ice Age', 'comedy movie', 2001, 8);
+
+// Store the movies
+const movies = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10];
+
+
+function generateTable() {
+    let table = '<table>';
+
+    // th
+    table += '<tr>   <th>Title</th>   <th>Description</th>   <th>Release Date</th>   <th>Rating</th>   </tr>';
+
+    // Loop through the movies array to create table rows 
+    for (let i = 0; i < movies.length; i++) {
+        // table += '<tr>';
+        table += movies[i].Details();  //Details method of each movie
+        // table += '</tr>';
+    }
+
+    table += '</table>';
+
+    // Insert table into HTML
+    document.getElementById('movieTable').innerHTML = table;
+}
+
+generateTable();
+
+    </script>
 </body>
 </html>
