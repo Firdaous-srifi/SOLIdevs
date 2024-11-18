@@ -1,0 +1,114 @@
+{
+    "books": [
+        {
+            "title": "Harry Potter",
+            "description": "Fanfiction, fantasy book",
+            "cover": "books/images/hpotter.png",
+            "linkpdf": "https://kvongcmehsanalibrary.wordpress.com/wp-content/uploads/2021/07/harrypotter.pdf",
+            "author": {
+                "fullname": "J.K. Rowling",
+                "biography": "J.K. Rowling, born on July 31, 1965, in Yate, England, is a renowned British author best known for creating the Harry Potter series."
+            },
+            "releasedate": "1997-06-26"
+        },
+        {
+            "title": "Joha",
+            "description": "Comedy book",
+            "cover": "books/images/joha.png",
+            "linkpdf": "https://kvongcmehsanalibrary.wordpress.com/wp-content/uploads/2021/07/harrypotter.pdf",
+            "author": {
+                "fullname": "",
+                "biography": ""
+            },
+            "releasedate": "2000-02-02"
+        },
+        {
+            "title": "The Da Vinci Code",
+            "description": "Mystery, thriller",
+            "cover": "books/images/davinci_code.png",
+            "linkpdf": "https://kvongcmehsanalibrary.wordpress.com/wp-content/uploads/2021/07/harrypotter.pdf",
+            "author": {
+                "fullname": "Dan Brown",
+                "biography": "Dan Brown is an American author best known for his thriller novels, including The Da Vinci Code."
+            },
+            "releasedate": "2003-03-18"
+        },
+        {
+            "title": "Pride and Prejudice",
+            "description": "Romantic novel",
+            "cover": "books/images/pride_and_prejudice.png",
+            "linkpdf": "https://example.com/pride_and_prejudice.pdf",
+            "author": {
+                "fullname": "Jane Austen",
+                "biography": "Jane Austen was an English novelist known for her realistic portrayals of the British landed gentry in the 19th century."
+            },
+            "releasedate": "1813-01-28"
+        },
+        {
+            "title": "1984",
+            "description": "Dystopian novel",
+            "cover": "books/images/1984.png",
+            "linkpdf": "https://example.com/1984.pdf",
+            "author": {
+                "fullname": "George Orwell",
+                "biography": "George Orwell was an English writer known for his critiques of totalitarianism and dystopian works like 1984 and Animal Farm."
+            },
+            "releasedate": "1949-06-08"
+        },
+        {
+            "title": "The Great Gatsby",
+            "description": "Novel, Jazz Age",
+            "cover": "books/images/great_gatsby.png",
+            "linkpdf": "https://example.com/great_gatsby.pdf",
+            "author": {
+                "fullname": "F. Scott Fitzgerald",
+                "biography": "F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century."
+            },
+            "releasedate": "1925-04-10"
+        },
+        {
+            "title": "To Kill a Mockingbird",
+            "description": "Classic, American South",
+            "cover": "books/images/to_kill_a_mockingbird.png",
+            "linkpdf": "https://example.com/to_kill_a_mockingbird.pdf",
+            "author": {
+                "fullname": "Harper Lee",
+                "biography": "Harper Lee was an American novelist best known for her Pulitzer Prize-winning novel To Kill a Mockingbird."
+            },
+            "releasedate": "1960-07-11"
+        },
+        {
+            "title": "Moby-Dick",
+            "description": "Adventure, sea story",
+            "cover": "books/images/moby_dick.png",
+            "linkpdf": "https://example.com/moby_dick.pdf",
+            "author": {
+                "fullname": "Herman Melville",
+                "biography": "Herman Melville was an American novelist, short story writer, and poet of the American Renaissance period, best known for Moby-Dick."
+            },
+            "releasedate": "1851-10-18"
+        },
+        {
+            "title": "The Catcher in the Rye",
+            "description": "Novel, coming-of-age",
+            "cover": "books/images/catcher_in_the_rye.png",
+            "linkpdf": "https://example.com/catcher_in_the_rye.pdf",
+            "author": {
+                "fullname": "J.D. Salinger",
+                "biography": "J.D. Salinger was an American writer known for his novel The Catcher in the Rye and his reclusive lifestyle."
+            },
+            "releasedate": "1951-07-16"
+        },
+        {
+            "title": "The Hobbit",
+            "description": "Fantasy, adventure",
+            "cover": "books/images/the_hobbit.png",
+            "linkpdf": "https://example.com/the_hobbit.pdf",
+            "author": {
+                "fullname": "J.R.R. Tolkien",
+                "biography": "J.R.R. Tolkien was an English writer, poet, philologist, and professor, best known for The Hobbit and The Lord of the Rings series."
+            },
+            "releasedate": "1937-09-21"
+        }
+    ]
+}

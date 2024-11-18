@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Wishlist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>BookWish</h1>
+            </div>
+            <div class="nav-buttons">
+                <button id="show-books" class="active">All Books</button>
+                <button id="show-wishlist">
+                    Wishlist
+                    <span id="wishlist-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="books-section" class="active">
+            <h2>Available Books</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search books...">
+            </div>
+            <div id="books-container" class="books-grid">
+                
+            </div>
+        </section>
+
+        <section id="wishlist-section">
+            <h2>My Wishlist</h2>
+            <div id="wishlist-container" class="books-grid"></div>
+            <div id="empty-wishlist" class="hidden">
+                <p>Your wishlist is empty</p>
+                <button id="browse-books">Browse Books</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

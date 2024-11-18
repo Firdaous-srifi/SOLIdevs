@@ -1,0 +1,22 @@
+{
+    "books": [
+      {
+        "title": "The Psychology of Computer Programming",
+        "description": "This classic work explores the psychological challenges faced by programmers and how understanding these aspects can lead to better collaboration and problem-solving.",
+        "cover": "images/thepsychologyofcomputerprogramming.png",
+        "author": {
+          "fullname": "Gerald M. Weinberg",
+          "biography": "Gerald M. Weinberg was an American software engineer and author known for his work on the human aspects of software engineering."
+        }
+      },
+      {
+        "title": "Sapiens: A Brief History of Humankind",
+        "description": "An exploration of human history from the Stone Age to the 21st century, examining how Homo sapiens came to dominate the Earth.",
+        "cover": "images/sapiens.png",
+        "author": {
+          "fullname": "Yuval Noah Harari",
+          "biography": "Yuval Noah Harari is an Israeli historian and professor at the Hebrew University of Jerusalem."
+        }
+      }
+    ]
+  }

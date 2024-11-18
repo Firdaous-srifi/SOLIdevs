@@ -5,96 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
     <style>
-        h1{
-            color: rgb(140, 184, 27);
-            text-decoration:underline;
+        h1 {
+            color: rgb(26, 125, 29);
+            text-decoration: underline;
+            text-align: center;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid rgb(40, 69, 41);
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        button {
+            color: greenyellow;
+            background-color: black;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: darkgreen;
         }
     </style>
 </head>
+
 <body>
-    <!-- <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>description</th>
-                    <th>release date</th>
-                    <th>imdb rating</th>
-            
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-
-    </table> -->
-
     <h1>Movies To Watch</h1>
-    <div id="movieTable"></div>
-
-    <div id="search">
-        <input type="number" id="searchYear">
-        <button id="searchBtn" >Search</button>
-    </div>
     
 
+    
+    <input type="text" id="searchInput" placeholder="Search for a movie..." onkeyup="searchMovie()">
+
+    <div>
+        <input type="text" id="movieTitle" placeholder="movie's name ">
+        <input type="text" id="movieDescription" placeholder="the movie's story">
+        <input type="number" id="movieReleaseDate" placeholder="release date">
+        <input type="number" id="movieRating" placeholder="Rating" min="1" max="5">
+        <button onclick="addMovie()">Add a Movie</button>
+    </div>
+
+
+
+    <div id="movieTable"></div>
 
     <script>
+    //movie object
         class Movie {
-            //parametre of objects
-    constructor(Title,Description,release_date,Rating) {
-        this.Title = Title;
-        this.description = Description;
-        this.Date = release_date;
-        this.Rating = Rating;
-    }
-    Details() {
-        return `
-        <tr>
-            <td>${this.Title}</td>
-            <td>${this.description}</td>
-            <td>${this.Date}</td>
-            <td>${this.Rating}</td>
-            </tr>`;
-    }
-}
+            constructor(Title, Description, release_date, Rating) {
+                this.Title = Title;
+                this.description = Description;
+                this.Date = release_date;
+                this.Rating = Rating;
+            }
+            Details(index) {
+                return `
+                <tr>   
+                    <td>${this.Title}</td>
+                    <td>${this.description}</td>
+                    <td>${this.Date}</td>
+                    <td>${this.Rating}</td>
+                    <td><button onclick="removeMovie(${index})">Remove</button></td>
+                </tr>`;
+            }
+        }
 
-    //creating movies
-    const movie1 = new Movie('Joker', 'a man who is mentally ill', 2001, 3);
-    const movie2 = new Movie('Avatar', 'overrated movie', 2018, 1);
-    const movie3 = new Movie('Jurassic Park', 'wild animals', 2001, 4);
-    const movie4 = new Movie('Barbie', 'feminist movie', 2001, 2);
-    const movie5 = new Movie('bortoqala morra', 'delulo girl', 2001, 1);
-    const movie6 = new Movie('Interstellar', 'space fantasy', 2001, 5);
-    const movie7 = new Movie('Inception', 'mindgame', 2001, 5);
-    const movie8 = new Movie('The Shawshank Redemption', 'prison escape story', 2001, 5);
-    const movie9 = new Movie('Godfather', 'italien mafia movie', 2001, 5);
-    const movie10 = new Movie('Ice Age', 'comedy movie', 2001, 4.5);
+        // Creating movies
+        const movie1 = new Movie('Joker', 'a man who is mentally ill', 2001, 3);
+        const movie2 = new Movie('Avatar', 'overrated movie', 2018, 1);
+        const movie3 = new Movie('Jurassic Park', 'wild animals', 2001, 4);
+        const movie4 = new Movie('Barbie', 'feminist movie', 2001, 2);
+        const movie5 = new Movie('bortoqala morra', 'delulo girl', 2001, 1);
+        const movie6 = new Movie('Interstellar', 'space fantasy', 2001, 5);
+        const movie7 = new Movie('Inception', 'mindgame', 2001, 5);
+        const movie8 = new Movie('Shawshank Redemption', 'prison escape story', 2001, 5);
+        const movie9 = new Movie('Godfather', 'italien mafia movie', 2001, 5);
+        const movie10 = new Movie('Ice Age', 'comedy movie', 2001, 4.5);
+        //stored
+        const movies = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10];
+        
+        // 
+        function generateTable(moviesToDisplay) {
+            let table = '<table>';
+            table += '<tr> <th>Title</th> <th>Description</th> <th>Release Date</th> <th>Rating</th> </tr>';
 
-// Store the movies
-const movies = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10];
+            for (let i = 0; i < moviesToDisplay.length; i++) {
+                table += moviesToDisplay[i].Details();//method tzid star lkol movie
+            }
+            //</>
+            table += '</table>';
+            document.getElementById('movieTable').innerHTML = table;
+        }
+///////////////////////////SEARCH
+        
+        function searchMovie() {
+            const myinput = document.getElementById('searchInput').value.toLowerCase();
+            const moviesToDisplay = [];
+            
+            for (let i = 0; i < movies.length; i++) {
 
+                if (movies[i].Title.toLowerCase().includes(myinput)) {
 
-function generateTable() {
-    let table = '<table>';
+                    moviesToDisplay.push(movies[i]);
+                }
+            }
+            // Generate table b matching movies
+            generateTable(moviesToDisplay);
+        }
+///////////////////////ADDMOVIE
 
-    // th
-    table += '<tr>   <th>Title</th>   <th>Description</th>   <th>Release Date</th>   <th>Rating</th>   </tr> ';
+        function addMovie(){
+            const title = document.getElementById('movieTitle').value;
+            const description= document.getElementById('movieDescription').value;
+            const releaseDate = document.getElementById('movieReleaseDate').value;
+            const rating = document.getElementById('movieRating').value;
 
-    // Loop through the movies array to create table rows 
-    for (let i = 0; i < movies.length; i++) {
-        // table += '<tr>';
-        table += movies[i].Details();  //Details method of each movie
-        // table += '</tr>';
-    }
+            if (title && description && releaseDate && rating) {
+                const newMovie = new Movie(title,description,parseInt(releaseDate), parseFloat(rating));
 
-    table += '</table>';
+                movies.push(newMovie);
 
-    // Insert table into HTML
-    document.getElementById('movieTable').innerHTML = table;
-}
+                document.getElementById('movieTitle').value = '';
+                document.getElementById('movieDescription').value = '';
+                document.getElementById('movieReleaseDate').value = '';
+                document.getElementById('movieRating').value = '';
 
-generateTable();
+                generateTable(movies);
+                
+            }else {
+                alert("please fill in all fields!!!!");
+            }
 
+        }
+        //////////remove
+        function removeMovie(index) {
+            movies.splice(index, 1);  
+            generateTable(movies);  
+        }
+        generateTable(movies);
     </script>
 </body>
 </html>
