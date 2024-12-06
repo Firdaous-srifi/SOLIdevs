@@ -1,0 +1,59 @@
+:root {
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --purple-color:#7119c4;
+    --green-color:#20b0bd;
+    --orange-color:#eb8e15;
+    --red-color:#ff0000;
+    --fs-2: 2.4rem;
+    --fw-400: 400;
+    --transition: 0.5s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--black-color);
+}
+
+.word{
+    color: var(--purple-color);
+    font-size: var(--fs-2);
+}
+
+.title {
+    color: var(--green-color);
+}
+.title::first-letter{
+    color: var(--orange-color);
+}
+
+.description {
+    color: var(--green-color);
+}
+.description:last-child(2){
+    color: var(--purple-color);
+}
+.link {
+    color: var(--purple-color);
+}
+.link:focus{
+    color: var(---white-color);
+    
+}
+.target-element{
+    color: var(--red-color);
+}
+.target-element:target{
+    color: var(--orange-color);
+}
+.target-element:nth-of-type(3) {
+    background-color: var(--white-color); /* Second child gets purple background */
+}
+
+
